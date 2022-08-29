@@ -1,12 +1,5 @@
 let myPow = (b, n) => {
-	switch (n) {
-		case 1:
-			return b;
-		case 0:
-			return 1;
-		default:
-			return Math.pow(b, n);
-	}
+	return Math.pow(b, n);
 };
 
 console.log(myPow(2.0, 10));
