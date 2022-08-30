@@ -13,6 +13,7 @@ double myPow(double b, double n) {
     double r = b;
     int _n;
 
+    if(n < 0 && n < 10000) return 0;
     if(n < 0) _n = 0 - n;
     else _n = n;
 
@@ -31,5 +32,6 @@ int main(void){
     printf("%f\n", myPow(2.0, -2));
     printf("%f\n", myPow(0.44528, 0));
     printf("%f\n", myPow(1.0, 2147483647));
+    printf("%f\n", myPow(2.0, -2147483648));
     return EXIT_SUCCESS;
 }
