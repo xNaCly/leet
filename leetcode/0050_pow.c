@@ -6,19 +6,20 @@
 double myPow(double b, double n) {
     if(!n) return 1;
     else if(n == 1) return b;
-    else if(b == 1.0) return b;
+    else if(b == 1.0 || b == -1.0) return b;
     
 
     b = (double) b;
-    double r = b;
+    double r = 1;
     int _n;
 
-    if(n < 0 && n < 10000) return 0;
+    if(n < 0 && n < -10000) return 0;
+
     if(n < 0) _n = 0 - n;
     else _n = n;
 
-    for(int i = _n - 1; i > 0; i--){
-        r *= b;
+    for(int i = 1; i <= _n; i++){
+        r = r * b;
     }
 
     if(n < 0) r = 1.0 / r;
