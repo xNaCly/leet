@@ -1,14 +1,14 @@
 let r = (n, t) => {
 	let m = {};
-    // insert all elements in n array in hashmap m
+	// insert all elements in n array in hashmap m
 	for (let i = 0; i < n.length; i++) {
 		m[n[i]] = i;
 	}
 
 	for (let i = 0; i < n.length; i++) {
-        // calc complement
+		// calc complement
 		let c = t - n[i];
-        // if c is in keys of hashmap and doesnt have a value of i return indexes
+		// if c is in keys of hashmap and doesnt have a value of i return indexes
 		if (
 			Object.keys(m)
 				.map((x) => parseInt(x))
