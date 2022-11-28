@@ -13,13 +13,10 @@ def chris_tree(n: int) -> None:
   for x in range(1,n+1):
     left_space = 1
     calc_left_space = (max_stars-stars)//2
-
     if x == n:
       left_space = 0
     else:
       left_space = calc_left_space
-
-
     print((" "*left_space)+("*"*stars))
     stars += 2
   print(" "*(n-1)+"*")
