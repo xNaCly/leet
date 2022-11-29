@@ -23,7 +23,6 @@ func validIPAddress(queryIP string) string {
 					isIp4 = false
 					break
 				} else {
-					// convert e to integer
 					num, err := strconv.Atoi(e)
 
 					if err == nil && (0 <= num && num <= 255) && !(len(e) > 1 && []rune(e)[0] == rune('0')) {
@@ -44,7 +43,6 @@ func validIPAddress(queryIP string) string {
 					break
 				}
 
-				// check if char is valid
 				num, err := strconv.ParseUint(e, 16, 64)
 
 				if err != nil || num > 65535 {
