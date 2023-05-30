@@ -24,11 +24,3 @@ func canPlaceFlowers(flowerbed []int, n int) bool {
 
 	return p >= n
 }
-
-func main() {
-	println(canPlaceFlowers([]int{0, 0, 1, 0, 0}, 1))
-	// println(canPlaceFlowers([]int{1, 0, 0, 0, 0, 1}, 2))
-	// println(canPlaceFlowers([]int{0, 0, 1, 0, 1}, 1))
-	// println(canPlaceFlowers([]int{1, 0, 0, 0, 1}, 1))
-	// println(canPlaceFlowers([]int{1, 0, 0, 0, 1}, 2))
-}

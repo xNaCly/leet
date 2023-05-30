@@ -1,15 +1,12 @@
 package main
 
 import (
-	"leetcode/leetcode_helpers"
+	"testing"
+
+	"github.com/xNaCly/leet/go/helper"
 )
 
-func isNumber(s string) bool {
-	var v bool
-	return v
-}
-
-func main() {
+func Test0065(t *testing.T) {
 	ints := map[string]bool{
 		"2":            true,
 		"0089":         true,
@@ -41,6 +38,6 @@ func main() {
 	}
 
 	for k, v := range ints {
-		leetcode_helpers.AssertEquals(v, isNumber(k), k)
+		helper.AssertEquals(v, isNumber(k), k)
 	}
 }

@@ -1,15 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
-var i = []string{
-	"?zs",
-	"ubv?w",
-	"j?qg??b",
-}
-
 func modifyString(s string) string {
 	ls := len(s)
 	b := make([]byte, 0)
@@ -27,10 +17,4 @@ func modifyString(s string) string {
 		b = append(b, by)
 	}
 	return string(b)
-}
-
-func main() {
-	for _, s := range i {
-		fmt.Println(modifyString(s))
-	}
 }
