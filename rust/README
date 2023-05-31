@@ -1,0 +1,5 @@
+Run via 'make run' with the puzzle specified via the 'file' argument:
+
+    make run file=m136.rs
+
+The Makefile will call 'rustc' and afterwards run the output
