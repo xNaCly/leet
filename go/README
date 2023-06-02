@@ -1,0 +1,9 @@
+Run via 'go test ./... ' with the puzzle specified as the '-run' argument:
+
+    go test ./... -run 242
+
+This will run the test function: 'Test242'
+
+To run all tests, simply omit the '-run' parameter:
+    
+    go test ./...
