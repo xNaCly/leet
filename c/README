@@ -1,0 +1,5 @@
+Run via 'make run' with the puzzle specified as the 'file' argument:
+
+    make run file=1491.c
+
+The Makefile will call 'gcc' and afterwards run the output
