@@ -61,7 +61,7 @@ public class Helper {
         if (r) {
             throw new AssertionError(String.format("{%s} not equal to {%s}", sa, sb));
         } else {
-            System.out.println(String.format("{%s} not equal to {%s}", sa, sb));
+            System.out.println(String.format("{%s} equal to {%s}", sa, sb));
         }
     }
 }
