@@ -27,6 +27,11 @@ public class Helper {
                     String.format("{%s} not equal to {%s}",
                             Arrays.stream(a).map(i -> i.toString()).collect(Collectors.joining(", ")),
                             Arrays.stream(b).map(i -> i.toString()).collect(Collectors.joining(", "))));
+        } else {
+
+            System.out.println(String.format("{%s} equal to {%s}",
+                    Arrays.stream(a).map(i -> i.toString()).collect(Collectors.joining(", ")),
+                    Arrays.stream(b).map(i -> i.toString()).collect(Collectors.joining(", "))));
         }
     }
 }
