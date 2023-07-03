@@ -7,4 +7,8 @@ User-profile:
 
 Compile and run 'prime.c' with 
     
-    make file=prime.c
+    make crun file=prime.c
+
+Compile and run 'prime.java' with 
+    
+    make jrun file=prime.java
