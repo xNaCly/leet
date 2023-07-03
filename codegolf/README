@@ -1,0 +1,10 @@
+codegolf
+--------
+
+User-profile:
+
+    https://code.golf/golfers/xNaCly
+
+Compile and run 'prime.c' with 
+    
+    make file=prime.c
