@@ -1,2 +1,1 @@
-main(n,j,r){for(n=2;n<101;n++){for(j=2,r=0;j<n;j++)n%j==0&&(r=1);r||printf("%d
-",n);}}
+n=2;main(j){for(n=2;n<98;n++){o:for(j=2;j<n;j++)if(n%j==0){n++;goto o;}printf("%d", n);}}
