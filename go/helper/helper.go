@@ -16,6 +16,12 @@ func AssertTrue(a bool) {
 	}
 }
 
+func AssertEqualsGeneric[T comparable](a T, b T) {
+	if a != b {
+		log.Panicf("assertion failed, value were not equal: %v != %v", a, b)
+	}
+}
+
 func AssertFalse(a bool) {
 	if a {
 		log.Panic("assertion failed, value was true")

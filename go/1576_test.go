@@ -8,23 +8,45 @@ import (
 )
 
 func Test1576(t *testing.T) {
-
-	var i = []string{
-		"?zs",
-		"ubv?w",
-		"j?qg??b",
+	var i = []struct {
+		in  string
+		exp string
+	}{
+		{
+			in:  "?zs",
+			exp: "azs",
+		},
+		{
+			in:  "ubv?w",
+			exp: "ubvaw",
+		},
+		{
+			in:  "j?qg??b",
+			exp: "jaqgacb",
+		},
 	}
 
 	for _, s := range i {
-		t.Run(s, func(t *testing.T) {
+		t.Run(s.in, func(t *testing.T) {
 			t.Run("first", func(t *testing.T) {
-				helper.AssertFalse(strings.ContainsRune(modifyStringFirst(s), '?'))
+				res := modifyStringFirst(s.in)
+				helper.AssertFalse(strings.ContainsRune(res, '?'))
+				helper.AssertEqualsGeneric(res, s.exp)
 			})
 			t.Run("second", func(t *testing.T) {
-				helper.AssertFalse(strings.ContainsRune(modifyStringSecond(s), '?'))
+				res := modifyStringSecond(s.in)
+				helper.AssertFalse(strings.ContainsRune(res, '?'))
+				helper.AssertEqualsGeneric(res, s.exp)
 			})
 			t.Run("third", func(t *testing.T) {
-				helper.AssertFalse(strings.ContainsRune(modifyStringThird(s), '?'))
+				res := modifyStringThird(s.in)
+				helper.AssertFalse(strings.ContainsRune(res, '?'))
+				helper.AssertEqualsGeneric(res, s.exp)
+			})
+			t.Run("forth", func(t *testing.T) {
+				res := modifyStringForth(s.in)
+				helper.AssertFalse(strings.ContainsRune(res, '?'))
+				helper.AssertEqualsGeneric(res, s.exp)
 			})
 		})
 	}
@@ -63,6 +85,16 @@ func BenchmarkThird(b *testing.B) {
 		b.Run(size, func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				modifyStringThird(strings.Repeat("j?qg??b", v))
+			}
+		})
+	}
+}
+
+func BenchmarkForth(b *testing.B) {
+	for size, v := range inputSizes {
+		b.Run(size, func(b *testing.B) {
+			for i := 0; i < b.N; i++ {
+				modifyStringForth(strings.Repeat("j?qg??b", v))
 			}
 		})
 	}
