@@ -3,4 +3,4 @@ run:
 	./$(file).out
 debug:
 	gcc $(file) -fsanitize=address -g3 -o $(file).out
-	gdb -ex 'run' ./$(file).out 
+	gdb -ex 'run' ./$(file).out -ex 'quit'
